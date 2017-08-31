@@ -1,0 +1,10 @@
+    <div class="item" ng-class="{'editing-item': editing, 'edited': wordling.edited}" ng-repeat="wordling in wordlings">
+      <label ng-hide="editing" ng-click="editing=true">{{wordling.word}}</label>
+      <input ng-show="editing" ng-blur="editing = false" type="text" ng-model="wordling.word" ng-change="wordling.edited = true"/>
+      <label ng-hide="editing" ng-click="editing=true">{{wordling.definition}}</label>
+      <input ng-show="editing" ng-blur="editing = false" type="text" ng-model="wordling.definition" ng-change="wordling.edited = true"/>
+      <div class="actions">
+        <a href="" ng-click="saveWordlings()">Save</a>
+        <a href="" ng-click="deleteWordling(wordling, $index)">Delete</a>
+      </div>
+    </div>

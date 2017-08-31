@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>C.O.W.</title>
+</head>
+<body ng-app="wordlingsApp">
+  <ng-include src="'templates/navbar.html'"></ng-include>
+  <div ng-controller="mainController">
+    <div>
+      <a href="#" ng-click="addWordling()">
+        + Add a New Wordling</a>
+      </div>
+     <wordling></wordling>
+   </div>
+
+  <script src="/scripts/vendor.bundle.js"></script>
+  <script src="/scripts/wordling.bundle.js"></script>
+</body>
+</html>
